@@ -6,6 +6,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var targetView: TargetView?
+    
+    @IBOutlet weak var riddleImageView: UIImageView!
    
     override func viewDidLoad() {
         super.viewDidLoad()

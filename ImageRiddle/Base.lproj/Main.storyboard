@@ -70,10 +70,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="riddleImageView" destination="iNP-K5-X0V" id="ccn-PE-WLx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116" y="219"/>
+            <point key="canvasLocation" x="-135" y="214"/>
         </scene>
     </scenes>
 </document>
