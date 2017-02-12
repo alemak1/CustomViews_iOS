@@ -13,6 +13,7 @@
 		409C47F71CB4347500124EAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409C47F61CB4347500124EAB /* Assets.xcassets */; };
 		409C47FA1CB4347500124EAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 409C47F81CB4347500124EAB /* LaunchScreen.storyboard */; };
 		409C48041CB449C600124EAB /* Seasame-St-Characters.png in Resources */ = {isa = PBXBuildFile; fileRef = 409C48031CB449C600124EAB /* Seasame-St-Characters.png */; };
+		BD7B5F6E1E502FCE00562F4D /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B5F6D1E502FCE00562F4D /* TargetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		409C47F91CB4347500124EAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		409C47FB1CB4347500124EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		409C48031CB449C600124EAB /* Seasame-St-Characters.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Seasame-St-Characters.png"; sourceTree = "<group>"; };
+		BD7B5F6D1E502FCE00562F4D /* TargetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				409C47EF1CB4347500124EAB /* AppDelegate.swift */,
 				409C47F11CB4347500124EAB /* ViewController.swift */,
+				BD7B5F6D1E502FCE00562F4D /* TargetView.swift */,
 				409C47F31CB4347500124EAB /* Main.storyboard */,
 				409C47F61CB4347500124EAB /* Assets.xcassets */,
 				409C47F81CB4347500124EAB /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				409C47F21CB4347500124EAB /* ViewController.swift in Sources */,
 				409C47F01CB4347500124EAB /* AppDelegate.swift in Sources */,
+				BD7B5F6E1E502FCE00562F4D /* TargetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
