@@ -8,8 +8,37 @@
 
 import UIKit
 
-class TargetView: UIView {
+let CROSSHAIRS_CIRCLE_SIZE: CGFloat = 20.0
+let CROSSHAIRS_SIZE: CGFloat = 30.0
+let CROSSHAIRS_CIRCLE_INSET = (CROSSHAIRS_SIZE - CROSSHAIRS_CIRCLE_SIZE)/2
 
+class TargetView: UIView {
+    
+    private var  crosshairsLayer: CAShapeLayer
+    
+    override init(frame: CGRect) {
+        self.crosshairsLayer = CAShapeLayer()
+        super.init(frame: frame)
+        
+        //set transpartent so that we still see the image
+        self.backgroundColor = UIColor.clear
+
+        //CAShapeLayer properties are set here, drawing must be done in drawRect()
+        self.crosshairsLayer.bounds = CGRect(x: 0, y: 0, width: CROSSHAIRS_SIZE, height: CROSSHAIRS_SIZE)
+        self.crosshairsLayer.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
+        
+        self.crosshairsLayer.backgroundColor = UIColor.red.cgColor //testing
+        
+        self.layer.addSublayer(self.crosshairsLayer)
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
