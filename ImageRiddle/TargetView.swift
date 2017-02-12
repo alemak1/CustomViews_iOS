@@ -51,6 +51,14 @@ class TargetView: UIView {
         }
     }
     
+    override func draw(_ rect: CGRect) {
+        
+        let circlePathBox = CGRect(x: CROSSHAIRS_CIRCLE_INSET/2, y: CROSSHAIRS_CIRCLE_INSET/2, width: self.crosshairsLayer.bounds.width - CROSSHAIRS_CIRCLE_INSET, height: self.crosshairsLayer.bounds.height - CROSSHAIRS_CIRCLE_INSET)
+        
+        let circlePath = UIBezierPath(ovalIn: circlePathBox)
+        self.crosshairsLayer.path = circlePath.cgPath
+    }
+    
     
     /*
     // Only override draw() if you perform custom drawing.
