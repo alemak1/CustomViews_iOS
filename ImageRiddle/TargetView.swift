@@ -27,7 +27,7 @@ class TargetView: UIView {
         self.crosshairsLayer.bounds = CGRect(x: 0, y: 0, width: CROSSHAIRS_SIZE, height: CROSSHAIRS_SIZE)
         self.crosshairsLayer.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
         
-        self.crosshairsLayer.backgroundColor = UIColor.red.cgColor //testing
+        //self.crosshairsLayer.backgroundColor = UIColor.red.cgColor //testing
         self.crosshairsLayer.strokeColor = UIColor.black.cgColor //crosshairs drawing color
         self.crosshairsLayer.fillColor = UIColor.clear.cgColor //we only want an outline
         
@@ -52,10 +52,28 @@ class TargetView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
+        //circle part of crosshairs
         
         let circlePathBox = CGRect(x: CROSSHAIRS_CIRCLE_INSET/2, y: CROSSHAIRS_CIRCLE_INSET/2, width: self.crosshairsLayer.bounds.width - CROSSHAIRS_CIRCLE_INSET, height: self.crosshairsLayer.bounds.height - CROSSHAIRS_CIRCLE_INSET)
         
         let circlePath = UIBezierPath(ovalIn: circlePathBox)
+        self.crosshairsLayer.path = circlePath.cgPath
+        
+        //cross part of crosshairs
+        var drawPoint: CGPoint
+        
+        //draw vertical first
+        drawPoint = CGPoint(x: self.crosshairsLayer.bounds.width/2, y: 0.0)
+        circlePath.move(to: drawPoint)
+        drawPoint.y = self.crosshairsLayer.bounds.height
+        circlePath.addLine(to: drawPoint)
+        
+        //draw horizontal second
+        drawPoint = CGPoint(x: 0, y: self.crosshairsLayer.bounds.size.height/2)
+        circlePath.move(to: drawPoint)
+        drawPoint.x = self.crosshairsLayer.bounds.width
+        circlePath.addLine(to: drawPoint)
+        
         self.crosshairsLayer.path = circlePath.cgPath
     }
     
