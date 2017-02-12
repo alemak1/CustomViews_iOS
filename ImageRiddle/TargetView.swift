@@ -38,6 +38,17 @@ class TargetView: UIView {
     }
     
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first{
+            let crosshairPos = touch.location(in: self)
+            print("touch position: \(crosshairPos.x), \(crosshairPos.y)")
+            
+            self.crosshairsLayer.position = crosshairPos
+            
+            self.setNeedsDisplay()
+        }
+    }
+    
     
     /*
     // Only override draw() if you perform custom drawing.
